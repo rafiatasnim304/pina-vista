@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pina Vista Tea & Hill Resort | Investment</title>
+    <!-- Google Fonts: Playfair Display for headings, Poppins for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS CSS for scroll animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Playfair Display', serif; }
+        .tea-gradient { background: linear-gradient(145deg, #1b4d3e 0%, #2d6a4f 100%); }
+        .gold-text { color: #c6a43f; }
+        .package-card { transition: all 0.2s; cursor: pointer; }
+        .package-card.selected { border: 3px solid #c6a43f; transform: scale(1.02); background-color: #fef9e7; }
+        .calc-btn { background: linear-gradient(145deg, #1b4d3e, #2d6a4f); }
+        .calc-btn:hover { background: linear-gradient(145deg, #14382c, #1f4f3a); }
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #2d6a4f;
+            border-left: 4px solid #c6a43f;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- Navigation with Logo (larger) -->
+    <div class="tea-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <i class="fas fa-leaf absolute text-8xl top-10 left-10 rotate-12"></i>
+            <i class="fas fa-leaf absolute text-9xl bottom-0 right-10 -rotate-45"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 relative z-10">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="asset/logo (1).png" alt="Pina Vista Logo" class="h-14 w-auto">
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="hover:gold-text transition">Home</a>
+                    <a href="investment.html" class="hover:gold-text transition">Capital</a>
+                    <a href="team.html" class="hover:gold-text transition">Team</a>
+                    <a href="portfolio.html" class="hover:gold-text transition">Portfolio</a>
+                    <a href="architecture.html" class="hover:gold-text transition">Architecture</a>
+                    <a href="rooms.html" class="hover:gold-text transition">Rooms & Facilities</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 flex flex-col space-y-2 px-2 pb-4">
+                <a href="index.html" class="block py-2 hover:gold-text transition">Home</a>
+                <a href="investment.html" class="block py-2 hover:gold-text transition">Capital</a>
+                <a href="team.html" class="block py-2 hover:gold-text transition">Team</a>
+                <a href="portfolio.html" class="block py-2 hover:gold-text transition">Portfolio</a>
+                <a href="architecture.html" class="block py-2 hover:gold-text transition">Architecture</a>
+                <a href="rooms.html" class="block py-2 hover:gold-text transition">Rooms & Facilities</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 relative z-10" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold gold-text">Investment Opportunity</h1>
+            <p class="text-xl text-gray-100 mt-2">Be a shareholder in Bangladesh’s finest eco‑luxury resort.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- Share Structure -->
+        <div class="text-center mb-12" data-aos="fade-up">
+            <span class="text-teal-700 font-semibold">📊 SHARE STRUCTURE</span>
+            <h2 class="text-4xl font-bold text-gray-800 mt-2">Total Shares: 300</h2>
+            <p class="text-gray-500 mt-2">Each share is priced at <span class="font-bold">BDT 1,50,000</span> (one lakh fifty thousand taka).</p>
+        </div>
+
+        <!-- Package Cards -->
+        <div class="flex flex-col md:flex-row justify-center gap-8 mt-12" data-aos="fade-up">
+            <!-- Gold Card (1 share) -->
+            <div id="gold-card" class="package-card selected bg-white rounded-3xl shadow-xl p-8 flex-1 max-w-sm mx-auto text-center border-2 border-transparent">
+                <i class="fas fa-crown text-5xl text-yellow-500 mb-4"></i>
+                <h3 class="text-3xl font-bold text-gray-800">Gold</h3>
+                <p class="text-teal-700 text-xl font-semibold mt-2">BDT 1,50,000</p>
+                <p class="text-gray-500 mt-1">(package-1)</p>
+                <ul class="text-left mt-6 space-y-3 text-gray-600">
+                    <li><i class="fas fa-check-circle text-teal-600 mr-2"></i>Quarterly dividends (20‑25% annual)</li>
+                    <li><i class="fas fa-check-circle text-teal-600 mr-2"></i>20% additional discount on any room booking</li>
+                    <li><i class="fas fa-check-circle text-teal-600 mr-2"></i>15% discount at all group establishments</li>
+                     <li><i class="fas fa-check-circle text-teal-600 mr-2"></i>25% discount on resort resturant</li>
+                    <li><i class="fas fa-check-circle text-teal-600 mr-2"></i>10% discount at Rizik, Satkora & Noor Foods (Sreemangal)</li>
+                </ul>
+            </div>
+            <!-- Platinum Card (2 shares) -->
+            <div id="platinum-card" class="package-card bg-white rounded-3xl shadow-xl p-8 flex-1 max-w-sm mx-auto text-center border-2 border-transparent">
+                <i class="fas fa-gem text-5xl text-purple-600 mb-4"></i>
+                <h3 class="text-3xl font-bold text-gray-800">Platinum</h3>
+                <p class="text-teal-700 text-xl font-semibold mt-2">BDT 3,00,000</p>
+                <p class="text-gray-500 mt-1">(package-2)</p>
+                <ul class="text-left mt-6 space-y-3 text-gray-600">
+                    <li><i class="fas fa-check-circle text-teal-600 mr-2"></i>All benefits of the Gold package</li>
+                    <li><i class="fas fa-check-circle text-teal-600 mr-2"></i>One complimentary room stay per year</li>
+                    <li><i class="fas fa-check-circle text-teal-600 mr-2"></i>25% discount at resort restaurant</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Calculator -->
+        <div class="mt-20 bg-white rounded-3xl shadow-xl p-8 md:p-12" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">📈 Calculate Your Potential Returns</h3>
+            <div class="grid md:grid-cols-2 gap-8 items-end">
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Your Investment (BDT)</label>
+                    <input type="number" id="investment-input" value="150000" min="0" step="10000" class="w-full border-2 border-gray-200 rounded-xl p-4 text-lg focus:border-teal-600 focus:ring-0">
+                    <p class="text-sm text-gray-500 mt-2">Minimum investment: BDT 1,50,000 (1 share)</p>
+                </div>
+                <div>
+                    <button id="calculate-btn" class="calc-btn w-full text-white text-xl font-bold py-4 px-6 rounded-xl shadow-lg transition">
+                        Calculate <i class="fas fa-calculator ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Display -->
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-teal-50 p-6 rounded-2xl">
+                    <div class="flex justify-between text-lg border-b pb-3"><span>Total Investment:</span><span class="font-bold text-teal-800" id="result-investment">৳ 1,50,000</span></div>
+                    <div class="flex justify-between text-lg mt-3"><span>Number of Shares:</span><span class="font-bold" id="result-shares">1</span></div>
+                    <div class="border-t mt-4 pt-4"><p class="text-sm text-gray-500">*Based on 20‑25% annual dividend, paid quarterly.</p></div>
+                </div>
+                <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl p-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div><p class="text-gray-600 text-sm">Monthly (20%)</p><p class="text-2xl font-bold text-teal-800" id="result-monthly-low">৳ 2,500</p></div>
+                        <div><p class="text-gray-600 text-sm">Monthly (25%)</p><p class="text-2xl font-bold text-teal-800" id="result-monthly-high">৳ 3,125</p></div>
+                        <div><p class="text-gray-600 text-sm">Annual (20%)</p><p class="text-2xl font-bold text-teal-800" id="result-annual-low">৳ 30,000</p></div>
+                        <div><p class="text-gray-600 text-sm">Annual (25%)</p><p class="text-2xl font-bold text-teal-800" id="result-annual-high">৳ 37,500</p></div>
+                    </div>
+                    <div class="border-t mt-4 pt-4">
+                        <div class="flex justify-between"><span class="text-gray-700">Total over 15 years (20%):</span><span class="font-bold" id="result-total15-low">৳ 4,50,000</span></div>
+                        <div class="flex justify-between"><span class="text-gray-700">Total over 15 years (25%):</span><span class="font-bold" id="result-total15-high">৳ 5,62,500</span></div>
+                        <div class="flex justify-between mt-2"><span class="text-gray-700">ROI (annual avg):</span><span class="font-bold text-green-600" id="result-roi">20% – 25%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="mt-20 mb-10 overflow-x-auto bg-white rounded-2xl shadow" data-aos="fade-up">
+            <table class="w-full text-left">
+                <thead class="bg-teal-800 text-white">
+                    <tr>
+                        <th class="px-6 py-4">Package</th>
+                        <th class="px-6 py-4">Shares</th>
+                        <th class="px-6 py-4">Investment</th>
+                        <th class="px-6 py-4">Annual Dividend (20‑25%)</th>
+                        <th class="px-6 py-4">Key Benefits</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y">
+                    <tr>
+                        <td class="px-6 py-5 font-bold">🥇 Gold</td>
+                        <td>1</td>
+                        <td>BDT 1,50,000</td>
+                        <td>BDT 30,000 – 37,500</td>
+                        <td>Quarterly dividends, 20% additional discount on any room booking, 15% discount at all group establishments,25% discount on resort resturant ,10% discount at Rizik, Satkora & Noor Foods</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-5 font-bold">💎 Platinum</td>
+                        <td>2+</td>
+                        <td>BDT 3,00,000+</td>
+                        <td>BDT 60,000 – 75,000+</td>
+                        <td>All Gold benefits + 1 complimentary room stay per year + 25% discount at resort restaurant</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Why Invest -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-teal-700 font-semibold tracking-wider"></span>
+            <h2 class="text-4xl font-bold text-gray-800 mt-2">Why Choose Pina Vista?</h2>
+            <p class="text-gray-500 mt-2 max-w-2xl mx-auto">An exclusive eco‑luxury resort offering attractive returns and unique investor benefits.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover-lift">
+                <i class="fas fa-leaf text-4xl text-teal-700 mb-3"></i>
+                <h3 class="font-bold text-lg">Eco‑Luxury Concept</h3>
+                <p class="text-gray-500 text-sm">Sustainable hospitality amidst tea gardens.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover-lift">
+                <i class="fas fa-chart-line text-4xl text-teal-700 mb-3"></i>
+                <h3 class="font-bold text-lg">Quarterly Dividends</h3>
+                <p class="text-gray-500 text-sm">20‑25% annual returns, paid quarterly.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover-lift">
+                <i class="fas fa-tags text-4xl text-teal-700 mb-3"></i>
+                <h3 class="font-bold text-lg">Exclusive Discounts</h3>
+                <p class="text-gray-500 text-sm">Room, restaurant & partner perks.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md text-center hover-lift">
+                <i class="fas fa-home text-4xl text-teal-700 mb-3"></i>
+                <h3 class="font-bold text-lg">Free Stays</h3>
+                <p class="text-gray-500 text-sm">Complimentary nights for multiple shares.</p>
+            </div>
+        </div>
+
+        <!-- Project Summary -->
+        <div class="bg-white rounded-3xl shadow-lg p-8 md:p-12 mb-20" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Project Summary</h2>
+            <p class="text-gray-600 text-lg leading-relaxed">Where luxury meets legacy. Pina Vista is more than a resort—it's a curated experience that pampers guests in premium comfort, operates in harmony with nature, and respectfully weaves the rich tapestry of local culture into every stay.</p>
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                <div><span class="font-semibold text-teal-700">Location:</span> Mohajerabad, Sreemangal</div>
+                <div><span class="font-semibold text-teal-700">Total land area:</span> 8.5 Bigha</div>
+                <div><span class="font-semibold text-teal-700">Project duration:</span> 15 years (2026‑2040)</div>
+                <div><span class="font-semibold text-teal-700">Project value:</span> 4.5 Crore BDT (approx.)</div>
+            </div>
+        </div>
+
+        <!-- Management Note -->
+        <p class="text-sm text-gray-500 italic mt-8 text-center" data-aos="fade-up">Note: The management reserves the right to amend, modify, add, or cancel any rules and regulations at any time without prior notice.</p>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+        </div>
+        <p>© Pina Vista Tea & Hill Resort – All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+    <script>
+        // Mobile menu
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) { btn.addEventListener('click', () => { menu.classList.toggle('hidden'); }); }
+
+        // Calculator
+        const goldCard = document.getElementById('gold-card');
+        const platinumCard = document.getElementById('platinum-card');
+        const investmentInput = document.getElementById('investment-input');
+        const calculateBtn = document.getElementById('calculate-btn');
+        const resultInvestment = document.getElementById('result-investment');
+        const resultShares = document.getElementById('result-shares');
+        const resultMonthlyLow = document.getElementById('result-monthly-low');
+        const resultMonthlyHigh = document.getElementById('result-monthly-high');
+        const resultAnnualLow = document.getElementById('result-annual-low');
+        const resultAnnualHigh = document.getElementById('result-annual-high');
+        const resultTotal15Low = document.getElementById('result-total15-low');
+        const resultTotal15High = document.getElementById('result-total15-high');
+        const resultRoi = document.getElementById('result-roi');
+        const sharePrice = 150000;
+        const lowRate = 0.20;
+        const highRate = 0.25;
+
+        function formatBDT(amount) {
+            return '৳ ' + amount.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+        }
+
+        function calculateProfit() {
+            let investment = parseFloat(investmentInput.value) || 0;
+            if (investment < 0) investment = 0;
+            const shares = Math.floor(investment / sharePrice);
+            const actualInvestment = shares * sharePrice;
+            resultInvestment.innerText = formatBDT(actualInvestment);
+            resultShares.innerText = shares;
+
+            if (shares === 0) {
+                resultMonthlyLow.innerText = resultMonthlyHigh.innerText = formatBDT(0);
+                resultAnnualLow.innerText = resultAnnualHigh.innerText = formatBDT(0);
+                resultTotal15Low.innerText = resultTotal15High.innerText = formatBDT(0);
+                resultRoi.innerText = '0%';
+                return;
+            }
+
+            const annualLow = actualInvestment * lowRate;
+            const annualHigh = actualInvestment * highRate;
+            const monthlyLow = annualLow / 12;
+            const monthlyHigh = annualHigh / 12;
+            const total15Low = annualLow * 15;
+            const total15High = annualHigh * 15;
+
+            resultMonthlyLow.innerText = formatBDT(monthlyLow);
+            resultMonthlyHigh.innerText = formatBDT(monthlyHigh);
+            resultAnnualLow.innerText = formatBDT(annualLow);
+            resultAnnualHigh.innerText = formatBDT(annualHigh);
+            resultTotal15Low.innerText = formatBDT(total15Low);
+            resultTotal15High.innerText = formatBDT(total15High);
+            resultRoi.innerText = '20% – 25%';
+        }
+
+        goldCard.addEventListener('click', () => {
+            goldCard.classList.add('selected');
+            platinumCard.classList.remove('selected');
+            investmentInput.value = sharePrice;
+            calculateProfit();
+        });
+        platinumCard.addEventListener('click', () => {
+            platinumCard.classList.add('selected');
+            goldCard.classList.remove('selected');
+            investmentInput.value = 2 * sharePrice;
+            calculateProfit();
+        });
+        calculateBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            goldCard.classList.remove('selected');
+            platinumCard.classList.remove('selected');
+            calculateProfit();
+        });
+        window.addEventListener('load', () => {
+            goldCard.classList.add('selected');
+            investmentInput.value = sharePrice;
+            calculateProfit();
+        });
+        investmentInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') { e.preventDefault(); calculateBtn.click(); } });
+    </script>
+</body>
+</html>

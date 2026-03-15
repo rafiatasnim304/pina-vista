@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pina Vista Tea & Hill Resort | Architecture</title>
+    <!-- Google Fonts: Playfair Display for headings, Poppins for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Playfair Display', serif; }
+        .tea-gradient { background: linear-gradient(145deg, #1b4d3e 0%, #2d6a4f 100%); }
+        .gold-text { color: #c6a43f; }
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 30px -10px rgba(0,60,30,0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- Navigation with Logo (larger) -->
+    <div class="tea-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <i class="fas fa-leaf absolute text-8xl top-10 left-10 rotate-12"></i>
+            <i class="fas fa-leaf absolute text-9xl bottom-0 right-10 -rotate-45"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 relative z-10">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="asset/logo (1).png" alt="Pina Vista Logo" class="h-14 w-auto">
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="hover:gold-text transition">Home</a>
+                    <a href="investment.html" class="hover:gold-text transition">Capital</a>
+                    <a href="team.html" class="hover:gold-text transition">Team</a>
+                    <a href="portfolio.html" class="hover:gold-text transition">Portfolio</a>
+                    <a href="architecture.html" class="hover:gold-text transition">Architecture</a>
+                    <a href="rooms.html" class="hover:gold-text transition">Rooms & Facilities</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 flex flex-col space-y-2 px-2 pb-4">
+                <a href="index.html" class="block py-2 hover:gold-text transition">Home</a>
+                <a href="investment.html" class="block py-2 hover:gold-text transition">Capital</a>
+                <a href="team.html" class="block py-2 hover:gold-text transition">Team</a>
+                <a href="portfolio.html" class="block py-2 hover:gold-text transition">Portfolio</a>
+                <a href="architecture.html" class="block py-2 hover:gold-text transition">Architecture</a>
+                <a href="rooms.html" class="block py-2 hover:gold-text transition">Rooms & Facilities</a>
+            </div>
+        </div>
+
+        <!-- Hero -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold gold-text">Project Architecture</h1>
+            <p class="text-xl text-gray-100 mt-2">Explore our stunning 3D architectural designs showcasing the beauty and elegance of Pina Vista Resort.</p>
+        </div>
+    </div>
+
+    <!-- Design Features -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <div class="bg-teal-50 p-10 rounded-3xl">
+            <h3 class="text-3xl font-bold text-gray-800">Design Features</h3>
+            <p class="text-gray-600 mt-2">Innovative architectural elements that define Pina Vista.</p>
+            <div class="flex flex-wrap gap-4 mt-6">
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm text-teal-800">Sustainable materials</span>
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm text-teal-800">Panoramic glass walls</span>
+                <span class="bg-white px-5 py-2 rounded-full shadow-sm text-teal-800">Natural ventilation</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Grid with hover effect - REORDERED -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 1. Aerial Resort View -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+                <img src="asset/picture1.jpeg" alt="Aerial Resort View" class="w-full h-64 object-cover">
+                <div class="p-4"><h3 class="font-bold">Aerial Resort View</h3><p class="text-sm text-gray-500">Complete resort layout and landscape design</p></div>
+            </div>
+            <!-- 2. Resort Entrance -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+                <img src="asset/picture4.jpeg" alt="Resort Entrance & Lobby" class="w-full h-64 object-cover">
+                <div class="p-4"><h3 class="font-bold">Resort Entrance</h3><p class="text-sm text-gray-500">Grand entrance with modern architectural features</p></div>
+            </div>
+            <!-- 3. Restaurant & Dining Area -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+                <img src="asset/picture9.jpeg" alt="Restaurant" class="w-full h-64 object-cover">
+                <div class="p-4"><h3 class="font-bold">Restaurant & Dining Area</h3><p class="text-sm text-gray-500">Multi‑cuisine restaurant with garden views</p></div>
+            </div>
+            <!-- 4. Tower building -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+                <img src="asset/picture3.jpeg" alt="Guest Room Exterior" class="w-full h-64 object-cover">
+                <div class="p-4"><h3 class="font-bold">Tower building</h3><p class="text-sm text-gray-500">Private balconies with panoramic hill views</p></div>
+            </div>
+            <!-- 5. Eco luxury cottages -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+                <img src="asset/picture6.jpeg" alt="Eco luxury cottages" class="w-full h-64 object-cover">
+                <div class="p-4"><h3 class="font-bold">Eco luxury cottages</h3><p class="text-sm text-gray-500">Float in infinity, surrounded by the sweet scent of Pineapple gardens</p></div>
+            </div>
+            <!-- 6. Premium couple pool villas -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+                <img src="asset/picture7.jpeg" alt="Swimming Pool" class="w-full h-64 object-cover">
+                <div class="p-4"><h3 class="font-bold">Premium couple pool villas</h3><p class="text-sm text-gray-500">Infinity pool overlooking Pineapple gardens</p></div>
+            </div>
+            <!-- 7. Multi-purpose hall -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
+                <img src="asset/picture8.jpeg" alt="Main Resort Building" class="w-full h-64 object-cover">
+                <div class="p-4"><h3 class="font-bold">Multi-purpose hall</h3><p class="text-sm text-gray-500">The perfect setting for weddings, seminars, and special celebrations</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with social icons -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+        </div>
+        <p>© Pina Vista Tea & Hill Resort – All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pina Vista Tea & Hill Resort | Portfolio</title>
+    <!-- Google Fonts: Playfair Display for headings, Poppins for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Playfair Display', serif; }
+        .tea-gradient { background: linear-gradient(145deg, #1b4d3e 0%, #2d6a4f 100%); }
+        .gold-text { color: #c6a43f; }
+        .hover-lift:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -10px rgba(0,60,30,0.3); transition: all 0.2s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- Navigation with Logo (larger) -->
+    <div class="tea-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <i class="fas fa-leaf absolute text-8xl top-10 left-10 rotate-12"></i>
+            <i class="fas fa-leaf absolute text-9xl bottom-0 right-10 -rotate-45"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 relative z-10">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="asset/logo (1).png" alt="Pina Vista Logo" class="h-14 w-auto">
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                     <a href="index.html" class="hover:gold-text transition">Home</a>
+                    <a href="investment.html" class="hover:gold-text transition">Capital</a>
+                    <a href="team.html" class="hover:gold-text transition">Team</a>
+                    <a href="portfolio.html" class="hover:gold-text transition">Portfolio</a>
+                    <a href="architecture.html" class="hover:gold-text transition">Architecture</a>
+                    <a href="rooms.html" class="hover:gold-text transition">Rooms & Facilities</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 flex flex-col space-y-2 px-2 pb-4">
+                 <a href="index.html" class="block py-2 hover:gold-text transition">Home</a>
+                <a href="investment.html" class="block py-2 hover:gold-text transition">Capital</a>
+                <a href="team.html" class="block py-2 hover:gold-text transition">Team</a>
+                <a href="portfolio.html" class="block py-2 hover:gold-text transition">Portfolio</a>
+                <a href="architecture.html" class="block py-2 hover:gold-text transition">Architecture</a>
+                <a href="rooms.html" class="block py-2 hover:gold-text transition">Rooms & Facilities</a>
+            </div>
+        </div>
+
+        <!-- Hero -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold gold-text">Management Portfolio</h1>
+            <p class="text-xl text-gray-100 mt-2">Explore our successful projects and achievements in luxury resort development and sustainable tourism.</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Existing projects ... (keep all original) -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p1.jpeg" alt="Nirjon Nature's Hideout" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Nirjon Nature's Hideout</h3>
+                    <p class="text-teal-600 mb-2">Sreemangal</p>
+                    <p class="text-gray-600 text-sm">A serene eco-resort nestled in the heart of tea gardens, offering premium cottages and nature trails.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p4.jpeg" alt="Hotel Merina" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Hotel Merina</h3>
+                    <p class="text-teal-600 mb-2">Sreemangal</p>
+                    <p class="text-gray-600 text-sm">Comfortable city hotel known for its warm hospitality and convenient location near the tea estates.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p2.jpeg" alt="Joldhara Resort" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Joldhara Resort</h3>
+                    <p class="text-teal-600 mb-2">Sreemangal</p>
+                    <p class="text-gray-600 text-sm">A tiny eco-escape where every corner feels like home.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p3.jpeg" alt="GALUI" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">GALUI</h3>
+                    <p class="text-teal-600 mb-2">Sunamgonj</p>
+                    <p class="text-gray-600 text-sm">A unique riverfront resort offering boat rides and traditional haor experiences.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p5.jpeg" alt="Mirikhong Eco Resort" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Mirikhong Eco Resort</h3>
+                    <p class="text-teal-600 mb-2">Lama, Bandarban</p>
+                    <p class="text-gray-600 text-sm">Eco-friendly resort in the hills of Bandarban, known for its indigenous cultural experiences.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p8.jpeg" alt="Rongerkheya" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Rongerkheya</h3>
+                    <p class="text-teal-600 mb-2">Sunamgonj</p>
+                    <p class="text-gray-600 text-sm">A tranquil getaway on the banks of a haor, famous for its sunset views and local cuisine.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p11.jpeg" alt="Noor Foods & Restaurant" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Noor Foods & Restaurant</h3>
+                    <p class="text-teal-600 mb-2">Sreemangal</p>
+                    <p class="text-gray-600 text-sm">Popular dining spot serving authentic Bengali cuisine.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p9.jpeg" alt="Foodnki Restaurant" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Foodanki Restaurant</h3>
+                    <p class="text-teal-600 mb-2">Sajek</p>
+                    <p class="text-gray-600 text-sm">Hilltop restaurant with panoramic views, specializing in local tribal dishes.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/pq.jpeg" alt="Shatkora Restaurant" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Shatkora Restaurant</h3>
+                    <p class="text-teal-600 mb-2">Sreemangal</p>
+                    <p class="text-gray-600 text-sm">Named after the famous citrus, this restaurant offers a fine-dining experience with local flavors.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p7.jpeg" alt="Riziq Restaurant" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Riziq Restaurant</h3>
+                    <p class="text-teal-600 mb-2">Sreemangal</p>
+                    <p class="text-gray-600 text-sm">A favorite among tourists for its diverse menu and cozy ambiance.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p10.jpeg" alt="Health Line Diagnostic Center" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Health Line Diagnostic Center</h3>
+                    <p class="text-teal-600 mb-2">Sreemangal</p>
+                    <p class="text-gray-600 text-sm">State-of-the-art medical diagnostics facility serving the local community.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p6.jpeg" alt="Civvy Square" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Civvy Square</h3>
+                    <p class="text-teal-600 mb-2">Sreemangal</p>
+                    <p class="text-gray-600 text-sm">A Premier Destination for Exclusive Apparel and Curated Fashion.</p>
+                </div>
+            </div>
+            <!-- New Project 1: Mirikhong Eco Resort (already added above, ensure it's there) -->
+            <!-- New Project 2: Jolpoddo Retreat -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
+                <img src="asset/p122.jpeg" alt="Jolpoddo Retreat" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">Jolpoddo Retreat</h3>
+                    <p class="text-teal-600 mb-2">Radhanagar</p>
+                    <p class="text-gray-600 text-sm">A tranquil cottage retreat overlooking a serene pond with blooming water lilies and lush natural surroundings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with social icons -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+        </div>
+        <p>© Pina Vista Tea & Hill Resort – All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
